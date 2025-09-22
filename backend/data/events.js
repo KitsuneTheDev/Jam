@@ -1,6 +1,6 @@
 // events.js
 
-const events = [
+export const events = [
   {
     id: 'event_01',
     name: 'Roof Party',
