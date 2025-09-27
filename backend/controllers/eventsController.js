@@ -25,3 +25,7 @@ export const getSingleEvent = (req, res, next) => {
 
     res.status(200).json(eventById);
 }
+
+// export const addEvent = (req, res, next) => {
+
+// }
