@@ -1,0 +1,21 @@
+.layoutContainer{
+    width: 100%;
+    height: 100%;
+    background-color: bisque;
+}
+
+.layoutGrid{
+    padding: 5px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows:max-content;
+}
+
+@media (min-width: 768px){
+    .layoutGrid{
+        grid-template-columns: repeat(8, 1fr);
+    }
+}

@@ -1,0 +1,9 @@
+.mainContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    aspect-ratio: 4/3;
+    background-color: burlywood;
+}

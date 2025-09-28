@@ -1,0 +1,14 @@
+.navbarContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/3;
+    background-color: brown;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.navbarContainer h1{
+    writing-mode: vertical-lr;
+}

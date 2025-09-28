@@ -1,9 +1,11 @@
-import style from './layout.module.css';
+import styles from './Layout.module.css';
 
-export default function Layout() {
+export default function Layout({ children }) {
     return(
-        <div className="layout-container">
-            
+        <div className={styles.layoutContainer}>
+            <div className={styles.layoutGrid}>
+                { children }
+            </div>
         </div>
     );;
 }
