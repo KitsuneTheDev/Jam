@@ -3,8 +3,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    grid-column-start: 3;
-    grid-column-end: 5;
+    grid-column: span 2;
     background-color: violet;
     aspect-ratio: 2/1;
+}
+
+@media(min-width: 768px) {
+    .ticketsContainer{
+        grid-column-start: 6;
+        grid-row-start: 2;
+        grid-column: span 2;
+    }
 }

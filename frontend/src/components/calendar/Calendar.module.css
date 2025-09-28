@@ -1,0 +1,15 @@
+.calendarContainer{
+    grid-column: span 4;
+    background-color: cornflowerblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(min-width: 768px) {
+    .calendarContainer{
+        grid-column-start: 3;
+        grid-row-start: 2;
+        grid-column: span 4;
+    }
+}

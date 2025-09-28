@@ -3,8 +3,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column: span 2;
     background-color: coral;
     aspect-ratio: 2/1;
+}
+
+@media(min-width: 768px) {
+    .eventsContainer{
+        grid-column-start: 1;
+        grid-row-start: 2;
+        grid-column: span 2;
+    }
 }

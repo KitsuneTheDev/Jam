@@ -5,6 +5,7 @@ import Profile from './components/profile/Profile.jsx';
 import Main from './components/main/Main.jsx';
 import Events from './components/events/Events.jsx';
 import Tickets from './components/tickets/Tickets.jsx';
+import Calendar from './components/calendar/Calendar.jsx';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <Main />
       <Events />
       <Tickets />
+      <Calendar />
     </Layout>
   );
 }
