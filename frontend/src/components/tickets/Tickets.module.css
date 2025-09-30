@@ -1,17 +1,23 @@
 .ticketsContainer{
+    height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    grid-column: span 2;
-    background-color: violet;
-    aspect-ratio: 2/1;
+    grid-row-start: 8;
+    grid-row-end: 9;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    box-sizing: border-box;
+    border: 3px solid black;
+    border-radius: 1rem;
 }
 
-@media(min-width: 768px) {
+@media(min-width: 1000px) {
     .ticketsContainer{
-        grid-column-start: 6;
-        grid-row-start: 2;
-        grid-column: span 2;
+        grid-column-start: 7;
+        grid-column-end: 9;
+        grid-row-start: 4;
+        grid-row-end: 5;
     }
 }

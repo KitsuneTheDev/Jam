@@ -1,5 +1,25 @@
-:root {
+@import './commoncss/fonts.css';
 
+:root {
+  --color-pink-1: #ff5ec4;
+  --color-pink-2: hsl(from #ff5ec4 h s l / 87%);
+  --color-pink-3: hsl(from #ff5ec4 h s l / 66%);
+  --color-pink-4: hsl(from #ff5ec4 h s l / 32%);
+  --color-hayrusset-1: #681916;
+  --color-hayrusset-2: hsl(from #681916 h s l / 87%);
+  --color-hayrusset-3: hsl(from #681916 h s l / 66%);
+  --color-hayrusset-4: hsl(from #681916 h s l / 32%);
+  --color-violet-1: #2d0060;
+  --color-violet-2: hsl(from #2d0060 h s l / 87%);;
+  --color-violet-3: hsl(from #2d0060 h s l / 66%);;
+  --color-violet-4: hsl(from #2d0060 h s l / 32%);;
+
+  --spacing-tiny: 5px;
+  --spacing-friend: 8px;
+  --spacing-collegue: 13px;
+  --spacing-social: 21px;
+  --spacing-manager: 34px;
+  --spacing-boss: 55px;
 }
 
 html, body{
@@ -7,4 +27,5 @@ html, body{
   height: 100%;
   margin: 0;
   padding: 0;
+  font-family: Audiowide;
 }
