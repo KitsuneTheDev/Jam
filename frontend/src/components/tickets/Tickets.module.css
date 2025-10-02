@@ -13,7 +13,7 @@
     border-radius: 1rem;
 }
 
-@media(min-width: 1000px) {
+@media(min-width: 1025px) {
     .ticketsContainer{
         grid-column-start: 7;
         grid-column-end: 9;

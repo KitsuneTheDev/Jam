@@ -6,18 +6,21 @@ import Main from './components/main/Main.jsx';
 import Events from './components/events/Events.jsx';
 import Tickets from './components/tickets/Tickets.jsx';
 import Calendar from './components/calendar/Calendar.jsx';
+import ThemeDataProvider from './contexts/ThemeDataContext.jsx';
 
 function App() {
 
   return(
-    <Layout>
-      <Navbar />
-      <Profile />
-      <Main />
-      <Events />
-      <Tickets />
-      <Calendar />
-    </Layout>
+    <ThemeDataProvider>
+      <Layout>
+        <Navbar />
+        <Profile />
+        <Main />
+        <Events />
+        <Tickets />
+        <Calendar />
+      </Layout>
+    </ThemeDataProvider>
   );
 }
 

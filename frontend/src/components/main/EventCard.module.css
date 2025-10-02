@@ -1,0 +1,27 @@
+.eventCardContainer{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-friend);
+    padding: var(--spacing-collegue);
+    border-bottom: 1px solid black;
+}
+
+.cardHeader{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-family: Suse-Regular;
+}
+
+.cardMain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-family: Suse-Bold;
+}
+
+.cardDetail{
+    font-size: 12px;
+    font-family: Suse-Regular;
+}

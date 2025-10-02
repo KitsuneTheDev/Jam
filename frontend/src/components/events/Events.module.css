@@ -13,7 +13,7 @@
     border-radius: 1rem;
 }
 
-@media(min-width: 1000px) {
+@media(min-width: 1025px) {
     .eventsContainer{
         grid-column-start: 1;
         grid-column-end: 3;

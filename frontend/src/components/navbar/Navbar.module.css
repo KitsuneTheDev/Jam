@@ -2,30 +2,60 @@
     width: 100%;
     height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: brown;
     grid-row-start: 1;
     grid-row-end: 4;
     grid-column-start: 1;
     grid-column-end: 2;
     box-sizing: border-box;
-    background: 
-        url('/public/imgs/shinobu_nobg.png') no-repeat 50% 10%;
-    background-size: cover;
-    border: 3px solid black;
-    border-radius: 1rem;
+    border-right: 1px solid black;
 }
 
-.navbarContainer h1{
-    writing-mode: vertical-lr;
+.navbarInner{
+    width: 100%;
+    height: 100%;
+    padding-top: var(--spacing-social);
+    padding-left: var(--spacing-social);
 }
 
-@media(min-width: 1000px) {
+.navbarElement{
+    padding-bottom: var(--spacing-collegue);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.footerContainer{
+    width: 100%;
+    font-size: 6px;
+    padding-left: var(--spacing-social);
+    padding-bottom: var(--spacing-social);
+}
+
+@media(min-width: 750px){
+    .navbarElement{
+        font-size: 20px;
+    }
+
+    .footerContainer{
+        font-size: 12px;
+    } 
+}
+
+@media(min-width: 1025px) {
     .navbarContainer{
         grid-row-start: 1;
         grid-row-end: 4;
         grid-column-start: 1;
         grid-column-end: 2;
+    }
+
+    .navbarElement{
+        font-size: 24px;
+    }
+
+    .footerContainer{
+        font-size: 12px;
     }
 }

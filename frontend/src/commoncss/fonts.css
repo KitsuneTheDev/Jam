@@ -1,6 +1,83 @@
 @font-face {
-    font-family: Audiowide;
-    src: url(../assets/fonts/Audiowide-Regular.ttf);
+    font-family: Suse-Bold;
+    src: url(../assets/fonts/SUSEMono-Bold.ttf);
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Suse-BoldItalic;
+    src: url(../assets/fonts/SUSEMono-BoldItalic.ttf);
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Suse-SemiBold;
+    src: url(../assets/fonts/SUSEMono-SemiBold.ttf);
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Suse-SemiBoldItalic;
+    src: url(../assets/fonts/SUSEMono-SemiBoldItalic.ttf);
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Suse-Medium;
+    src: url(../assets/fonts/SUSEMono-Medium.ttf);
     font-weight: 500;
     font-style: normal;
+}
+
+@font-face {
+    font-family: Suse-MediumItalic;
+    src: url(../assets/fonts/SUSEMono-MediumItalic.ttf);
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Suse-Regular;
+    src: url(../assets/fonts/SUSEMono-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Suse-RegularItalic;
+    src: url(../assets/fonts/SUSEMono-Italic.ttf);
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Suse-Light;
+    src: url(../assets/fonts/SUSEMono-Light.ttf);
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Suse-LightItalic;
+    src: url(../assets/fonts/SUSEMono-LightItalic.ttf);
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Suse-Thin;
+    src: url(../assets/fonts/SUSEMono-ExtraLight.ttf);
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Suse-ThinItalic;
+    src: url(../assets/fonts/SUSEMono-ExtraLightItalic.ttf);
+    font-weight: 200;
+    font-style: italic;
 }

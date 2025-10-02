@@ -1,18 +1,31 @@
 @import './commoncss/fonts.css';
 
 :root {
-  --color-pink-1: #ff5ec4;
-  --color-pink-2: hsl(from #ff5ec4 h s l / 87%);
-  --color-pink-3: hsl(from #ff5ec4 h s l / 66%);
-  --color-pink-4: hsl(from #ff5ec4 h s l / 32%);
-  --color-hayrusset-1: #681916;
-  --color-hayrusset-2: hsl(from #681916 h s l / 87%);
-  --color-hayrusset-3: hsl(from #681916 h s l / 66%);
-  --color-hayrusset-4: hsl(from #681916 h s l / 32%);
-  --color-violet-1: #2d0060;
-  --color-violet-2: hsl(from #2d0060 h s l / 87%);;
-  --color-violet-3: hsl(from #2d0060 h s l / 66%);;
-  --color-violet-4: hsl(from #2d0060 h s l / 32%);;
+  --color-pink-1: #ffa6d9;
+  --color-pink-2: hsl(from #ffa6d9 h s l / 87%);
+  --color-pink-3: hsl(from #ffa6d9 h s l / 66%);
+  --color-pink-4: hsl(from #ffa6d9 h s l / 32%);
+  --color-green-1: #6bffb3;
+  --color-green-2: hsl(from #6bffb3 h s l / 87%);
+  --color-green-3: hsl(from #6bffb3 h s l / 66%);
+  --color-green-4: hsl(from #6bffb3 h s l / 32%);
+  --color-violet-1: #9161f2;
+  --color-violet-2: hsl(from #9161f2 h s l / 87%);
+  --color-violet-3: hsl(from #9161f2 h s l / 66%);
+  --color-violet-4: hsl(from #9161f2 h s l / 32%);
+
+  --custom-font-bold: 'Suse-Bold';
+  --custom-font-boldItalic: 'Suse-BoldItalic';
+  --custom-font-semiBold: 'Suse-SemiBold';
+  --custom-font-semiBoldItalic: 'Suse-SemiBoldItalic';
+  --custom-font-medium: 'Suse-Medium';
+  --custom-font-mediumItalic: 'Suse-MediumItalic';
+  --custom-font-regular: 'Suse-Regular';
+  --custom-font-regularItalic: 'Suse-RegularItalic';
+  --custom-font-light: 'Suse-Light';
+  --custom-font-lightItalic: 'Suse-LightItalic';
+  --custom-font-thin: 'Suse-Thin';
+  --custom-font-thinItalic: 'Suse-ThinItalic';
 
   --spacing-tiny: 5px;
   --spacing-friend: 8px;
@@ -27,5 +40,9 @@ html, body{
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: Audiowide;
+  font-family: Suse-Regular;
+}
+
+::-webkit-scrollbar{
+  display: none;
 }

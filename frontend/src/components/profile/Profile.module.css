@@ -1,23 +1,148 @@
 .profileContainer{
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     grid-row-start: 1;
     grid-row-end: 4;
     grid-column-start: 2;
     grid-column-end: 5;
     box-sizing: border-box;
-    border: 3px solid black;
-    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
 }
 
-@media(min-width: 1000px) {
+.profileInner{
+    width: 100%;
+    height: 100%;
+    max-height: 200px;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid black;
+    border-radius: 1rem;
+    box-shadow: 2px 2px black;
+}
+
+.profileLeft{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: rotate(180deg);
+    font-size: 16px;
+    writing-mode: vertical-rl;
+}
+
+.userNameContainer{
+    text-align: center;
+    border-left: 1px solid black;
+}
+
+.userNameDesc, .titleDesc{
+    text-align: center;
+    font-family: var(--custom-font-bold);
+    font-size: 10px;
+}
+
+.profileRight{
+    height: 100%;
+    font-size: 12px;
+    padding-right: var(--spacing-friend);
+}
+
+.rightHeader{
+    display: flex;
+    padding-top: var(--spacing-social);
+}
+
+.headerRight{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-left: var(--spacing-social);
+}
+
+.birthDate{
+    border-bottom: 1px solid black;
+    font-family: var(--custom-font-light);
+}
+
+.birthDateTitle{
+    font-family: var(--custom-font-bold);
+    font-size: 10px;
+}
+
+.rightBody{
+    display: flex;
+    flex-direction: column;
+}
+
+.bodyInfo{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: var(--spacing-social);
+}
+
+.titleId{
+    font-family: var(--custom-font-bold);
+    text-align: center;
+}
+
+.infoUp, .infoDown{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.infoSubLeft, .infoSub{
+    width: 100%;
+}
+
+.name, .role, .email{
+    text-align: start;
+    font-family: var(--custom-font-light);
+    border-bottom: 1px solid black;
+}
+
+.nameTitle, .roleTitle, .emailTitle{
+    text-align: start;
+    font-family: var(--custom-font-bold);
+    font-size: 10px;
+}
+
+.bodyPicture{
+    display: none;
+    height: 100%;
+    width: 250px;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgContainer{
+    box-sizing: border-box;
+    width: 120px;
+    height: 120px;
+    border: 1px solid black;
+    box-shadow: black 2px 2px;
+}
+
+.imgContainer img{
+    width: 100%;
+}
+
+@media(min-width: 1025px) {
     .profileContainer{
         grid-row-start: 1;
         grid-row-end: 4;
         grid-column-start: 6;
         grid-column-end: 9;
+    }
+}
+
+@media(min-width: 768px) {
+    .bodyPicture{
+        display: flex;
     }
 }
