@@ -1,2 +1,2 @@
-![demo desktop](/frontend/public/demo/demoDesktop.png);
-![demo mobile](/frontend/public/demo/demoMobile.png);
+![demo desktop](/frontend/public/demo/demoDesktop.png)
+![demo mobile](/frontend/public/demo/demoMobile.png)
