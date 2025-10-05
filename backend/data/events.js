@@ -13,7 +13,8 @@ export const events = [
     image: '',
     tickets: [
       { 
-        ticketId: 'event_01_ticket_01', 
+        ticketId: 'event_01_ticket_01',
+        parentId: 'event_01',
         type: 'Normal', 
         price: 50,
         soldTickets: 83,
@@ -35,6 +36,7 @@ export const events = [
     tickets: [
       { 
         ticketId: 'event_02_ticket_01',
+        parentId: 'event_02',
         type: 'Normal',
         price: 10,
         soldTickets: 8,
@@ -56,6 +58,7 @@ export const events = [
     tickets: [
       { 
         ticketId: 'event_03_ticket_01',
+        parentId: 'event_03',
         type: 'Participant',
         price: 20,
         soldTickets: 20,
@@ -64,6 +67,7 @@ export const events = [
         curreny: 'GBP', 
     }, { 
         ticketId: 'event_03_ticket_02',
+        parentId: 'event_03',
         type: 'Audience',
         price: 50,
         soldTickets: 80,
@@ -86,6 +90,7 @@ export const events = [
     tickets: [
     { 
         ticketId: 'event_04_ticket_01',
+        parentId: 'event_04',
         type: 'Normal',
         price: 50,
         soldTickets: 80,

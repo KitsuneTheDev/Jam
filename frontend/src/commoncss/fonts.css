@@ -81,3 +81,45 @@
     font-weight: 200;
     font-style: italic;
 }
+
+@font-face {
+    font-family: Tourney-XBold;
+    src: url(../assets/fonts/Tourney_Expanded-ExtraBold.ttf);
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Tourney-Bold;
+    src: url(../assets/fonts/Tourney_Expanded-Bold.ttf);
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Tourney-Medium;
+    src: url(../assets/fonts/Tourney_Expanded-Medium.ttf);
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Tourney-Regular;
+    src: url(../assets/fonts/Tourney_Expanded-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Tourney-Light;
+    src: url(../assets/fonts/Tourney_Expanded-Light.ttf);
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Tourney-Thin;
+    src: url(../assets/fonts/Tourney_Expanded-Thin.ttf);
+    font-weight: 200;
+    font-style: normal;
+}

@@ -27,6 +27,13 @@
   --custom-font-thin: 'Suse-Thin';
   --custom-font-thinItalic: 'Suse-ThinItalic';
 
+  --custom-font-secondary-xbold: 'Tourney-XBold';
+  --custom-font-secondary-bold: 'Tourney-Bold';
+  --custom-font-secondary-medium: 'Tourney-Medium';
+  --custom-font-secondary-regular: 'Tourney-Regular';
+  --custom-font-secondary-light: 'Tourney-Light';
+  --custom-font-secondary-thin: 'Tourney-Thin';
+
   --spacing-tiny: 5px;
   --spacing-friend: 8px;
   --spacing-collegue: 13px;

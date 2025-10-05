@@ -1,10 +1,11 @@
 import styles from './Profile.module.css';
-import { user } from '../../data/user.js';
+import { users } from '../../data/users.js';
 import { useThemeData } from '../../contexts/ThemeDataContext.jsx';
 
 export default function Profile() {
 
     const { selectedThemeData } = useThemeData();
+    const user = users[0];
 
     return(
         <div className={styles.profileContainer}>
@@ -15,7 +16,7 @@ export default function Profile() {
                 </div>
                 <div className={styles.profileRight}>
                     <div className={styles.rightHeader}>
-                        <div className={styles.headerLeft}>THE NATIONAL ARCHIVES</div>
+                        <div className={styles.headerLeft}>{selectedThemeData.headerLeft}</div>
                         <div className={styles.headerRight}>
                             <div className={styles.birthDate}>{user.birthDate}</div>
                             <div className={styles.birthDateTitle}>DATE</div>
@@ -24,8 +25,8 @@ export default function Profile() {
                     <div className={styles.rightBody}>
                         <div className={styles.bodyInfo}>
                                 <div className={styles.sectionName}>
-                                    <div className={styles.titleId}>IDENTIFICATION CARD</div>
-                                    <div className={styles.titleDesc}>NOT TRANSFERABLE</div>
+                                    <div className={styles.titleId}>{selectedThemeData.titleId}</div>
+                                    <div className={styles.titleDesc}>{selectedThemeData.titleDesc}</div>
                                 </div>
                             <div className={styles.infoUp}>
                                 <div className={styles.infoSubLeft}>

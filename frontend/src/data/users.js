@@ -10,11 +10,14 @@
 }
 */
 
-const users = [
+export const users = [
   {
     id: 1,
-    username: 'admin',
+    username: 'Kitsu',
     email: 'kitsunethedeveloper@gmail.com',
+    birthDate: '14-05-1994',
+    name: 'Ozan',
+    surname: 'Celikkol',
     role: 'admin',
     purchasedTickets: [
       {
@@ -55,5 +58,3 @@ const users = [
     ]
   },
 ];
-
-export { users };
