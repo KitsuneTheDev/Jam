@@ -11,7 +11,7 @@ export default function Profile() {
         <div className={styles.profileContainer}>
             <div className={styles.profileInner}>
                 <div className={styles.profileLeft}>
-                    <div className={styles.userNameContainer}>{user.username}</div>
+                    <div className={styles.userNameContainer}>{user.nickname}</div>
                     <div className={styles.userNameDesc}>{selectedThemeData.userNameDesc}</div>
                 </div>
                 <div className={styles.profileRight}>
@@ -22,12 +22,14 @@ export default function Profile() {
                             <div className={styles.birthDateTitle}>DATE</div>
                         </div>
                     </div>
+                    <div className={styles.rightDesc}>
+                        <div className={styles.sectionName}>
+                            <div className={styles.titleId}>{selectedThemeData.titleId}</div>
+                            <div className={styles.titleDesc}>{selectedThemeData.titleDesc}</div>
+                        </div>
+                    </div>
                     <div className={styles.rightBody}>
                         <div className={styles.bodyInfo}>
-                                <div className={styles.sectionName}>
-                                    <div className={styles.titleId}>{selectedThemeData.titleId}</div>
-                                    <div className={styles.titleDesc}>{selectedThemeData.titleDesc}</div>
-                                </div>
                             <div className={styles.infoUp}>
                                 <div className={styles.infoSubLeft}>
                                     <div className={styles.name}>{`${user.name} ${user.surname}`}</div>
@@ -46,11 +48,10 @@ export default function Profile() {
                             </div>
                         </div>
                     </div>
-                    <div className={styles.rightDetails}></div>
                 </div>
                     <div className={styles.bodyPicture}>
                         <div className={styles.imgContainer}>
-                           <img src="/public/imgs/kitsuLogo.png" alt="user avatar" /> 
+                           <img src="/imgs/kitsuLogo.png" alt="user avatar" /> 
                         </div>
                     </div>
             </div>

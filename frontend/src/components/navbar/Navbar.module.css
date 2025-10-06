@@ -22,26 +22,16 @@
 
 .navbarElement{
     padding-bottom: var(--spacing-collegue);
-    font-size: 12px;
+    font-size: var(--custom-font-size-sm);
     font-weight: 700;
 }
 
 .footerContainer{
     width: 100%;
-    font-size: 6px;
+    font-size: var(--custom-font-size-xs);
     padding-left: var(--spacing-social);
     padding-bottom: var(--spacing-social);
     padding-right: var(--spacing-social);
-}
-
-@media(min-width: 750px){
-    .navbarElement{
-        font-size: 20px;
-    }
-
-    .footerContainer{
-        font-size: 12px;
-    } 
 }
 
 @media(min-width: 1025px) {
@@ -50,13 +40,5 @@
         grid-row-end: 4;
         grid-column-start: 1;
         grid-column-end: 2;
-    }
-
-    .navbarElement{
-        font-size: 24px;
-    }
-
-    .footerContainer{
-        font-size: 12px;
     }
 }
