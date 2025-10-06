@@ -9,13 +9,13 @@ export const ageLimit = [
         ageLimitId: 'limit_01',
         ageValue: 0
     }, {
-        ageLimit: 'limit_02',
+        ageLimitId: 'limit_02',
         ageValue: 16
     }, {
-        ageLimit: 'limit_03',
+        ageLimitId: 'limit_03',
         ageValue: 18
     }, {
-        ageLimit: 'limit_04',
+        ageLimitId: 'limit_04',
         ageValue: 21
     }
 ]

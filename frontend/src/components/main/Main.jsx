@@ -7,7 +7,7 @@ export default function Main() {
     return(
         <div className={styles.mainContainer}>
             <div className={styles.eventsContainer}>
-                {events.map((event) => <EventCard key={event.id} event={event}/>)}
+                {events.map((event) => <EventCard key={event.eventId} event={event}/>)}
             </div>
         </div>
     );

@@ -31,6 +31,7 @@
     font-size: 6px;
     padding-left: var(--spacing-social);
     padding-bottom: var(--spacing-social);
+    padding-right: var(--spacing-social);
 }
 
 @media(min-width: 750px){
