@@ -50,9 +50,9 @@ export const events = [
     eventName: 'Dreams Land',
     eventDate: '2026-03-15',
     locationId: 'location_03',
-    description: 'dressCode_04.',
+    description: 'Costume party.',
     alcohol: false,
-    dressCodeId: 'Costume',
+    dressCodeId: 'dressCode_04',
     ageLimitId: 'limit_03',
     imageId: 'imageId_04'
   },

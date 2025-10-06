@@ -13,21 +13,25 @@
     box-sizing: border-box;
     border: 1px solid black;
     border-radius: 1rem;
+    padding: var(--spacing-collegue);
 }
 
 .eventsContainer::after{
     content: 'Up Coming';
     position: absolute;
     font-family: var(--custom-font-secondary-medium);
-    font-size: 12px;
+    font-size: var(--custom-font-size-sm);
     height: 8px;
     top: 0;
     left: 10%;
     transform: translateY(-50%);
     z-index: 5;
     padding: 5px;
-    color: green;
+    color: var(--color-pink-1);
     background-color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 1rem;
     overflow: hidden;
 }
 
@@ -37,7 +41,7 @@
     justify-content: space-between;
     align-items: center;
     font-family: var(--custom-font-light);
-    font-size: 12px;
+    font-size: var(--custom-font-size-sm);
     padding-top: var(--spacing-collegue);
 }
 
@@ -59,8 +63,8 @@
 
 .eventName {
     font-family: var(--custom-font-secondary-medium);
-    font-size: 20px;
-    color: red;
+    font-size: var(--custom-font-size-md);
+    color: var(--color-violet-1);
 }
 
 .eventsDetails{
@@ -68,7 +72,7 @@
     display: flex;
     justify-content: space-between;
     font-family: var(--custom-font-light);
-    font-size: 12px;
+    font-size: var(--custom-font-size-sm);
     padding-bottom: var(--spacing-collegue);
 }
 
@@ -90,7 +94,7 @@
     }
 
     .eventsContainer::after{
-        font-size: 24px;
+        font-size: var(--custom-font-size-sm);
         height: 24px;
     }
 }

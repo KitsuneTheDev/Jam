@@ -9,7 +9,7 @@
 .cardHeader{
     display: flex;
     justify-content: space-between;
-    font-size: 12px;
+    font-size: var(--custom-font-size-sm);
     font-family: Suse-Regular;
 }
 
@@ -17,11 +17,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
+    font-size: var(--custom-font-size-lg);
     font-family: Suse-Bold;
 }
 
 .cardDetail{
-    font-size: 12px;
+    font-size: var(--custom-font-size-sm);
     font-family: Suse-Regular;
 }

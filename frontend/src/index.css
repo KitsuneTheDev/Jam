@@ -95,6 +95,13 @@ html, body{
 
 @media(min-width: 600px) {
   :root{
+    --spacing-tiny: 6px;
+    --spacing-friend: 8px;
+    --spacing-collegue: 10px;
+    --spacing-social: 12px;
+    --spacing-manager: 14px;
+    --spacing-boss: 16px;
+
     --custom-font-size-xs: 14px;
     --custom-font-size-sm: 18px;
     --custom-font-size-rg: 22px;
@@ -105,14 +112,21 @@ html, body{
   }
 }
 
-/* @media(min-width: 800px) {
+@media(min-width: 1025px) and (max-width: 1115px) {
   :root{
-    --custom-font-size-xs: 18px;
-    --custom-font-size-sm: 22px;
-    --custom-font-size-rg: 24px;
-    --custom-font-size-md: 30px;
-    --custom-font-size-lg: 34px;
-    --custom-font-size-xl: 38px;
-    --custom-font-size-xxl: 46px;
+    --spacing-tiny: 4px;
+    --spacing-friend: 6px;
+    --spacing-collegue: 8px;
+    --spacing-social: 10px;
+    --spacing-manager: 12px;
+    --spacing-boss: 14px;
+
+    --custom-font-size-xs: 12px;
+    --custom-font-size-sm: 16px;
+    --custom-font-size-rg: 20px;
+    --custom-font-size-md: 24px;
+    --custom-font-size-lg: 28px;
+    --custom-font-size-xl: 32px;
+    --custom-font-size-xxl: 40px;
   }
-} */
+}

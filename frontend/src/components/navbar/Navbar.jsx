@@ -6,8 +6,8 @@ export default function Navbar() {
             <nav className={styles.navbarInner}>
                 <div className={styles.navbarElement}>HOME</div>
                 <div className={styles.navbarElement}>PROFILE</div>
-                <div className={styles.navbarElement}>EVENTS</div>
-                <div className={styles.navbarElement}>TICKETS</div>
+                <div className={styles.navbarElement}>MY-EVENTS</div>
+                <div className={styles.navbarElement}>MY-TICKETS</div>
                 <div className={styles.navbarElement}>CALENDAR</div>
             </nav>
             <footer className={styles.footerContainer}>

@@ -10,12 +10,12 @@ export const dressCode = [
         dressCodeName: 'Casual'
     }, {
         dressCodeId: 'dressCode_02',
-        dressCode: 'Semi-Formal'
+        dressCodeName: 'Semi-Formal'
     }, {
         dressCodeId: 'dressCode_03',
-        dressCode: 'Formal'
+        dressCodeName: 'Formal'
     }, {
         dressCodeId: 'dressCode_04',
-        dressCode: 'Costume'
+        dressCodeName: 'Costume'
     }
 ]
