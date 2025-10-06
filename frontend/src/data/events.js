@@ -1,16 +1,27 @@
-// events.js
+/*
+  EVENTS TABLE
+    EVENTID       -- UNIQUE PK
+    EVENTNAME     -- STRING
+    EVENTDATE     -- DATE
+    LOCATIONID    -- FK
+    DESCRIPTION   -- STRING
+    ISALCOHOL     -- BOOLEAN
+    DRESSCODEID   -- FK
+    AGELIMITID    -- FK
+    IMAGEID       -- FK
+*/
 
 export const events = [
   {
-    id: 'event_01',
-    name: 'Roof Party',
-    date: '2025-11-3',
-    location: 'somewhere in Istanbul',
+    eventId: 'event_01',
+    eventName: 'Roof Party',
+    eventDate: '2025-11-3',
+    locationId: 'location_01',
     description: 'Chill rooftop sunset party with relaxing musics.',
     alcohol: true,
-    dressCode: 'Casual',
-    ageLimit: 21,
-    image: '',
+    dressCodeId: 'dressCode_01',
+    ageLimitId: 'limit_04',
+    imageId: 'imageId_01',
     tickets: [
       { 
         ticketId: 'event_01_ticket_01', 
@@ -23,15 +34,15 @@ export const events = [
     ],
   },
   {
-    id: 'event_02',
-    name: `Let's Speek French`,
-    date: '2025-11-20',
-    location: 'somewhere in Ankara',
+    eventId: 'event_02',
+    eventName: `Let's Speek French`,
+    eventDate: '2025-11-20',
+    locationId: 'location_02',
     description: 'A speaking event for practising French for all levels.',
     alcohol: false,
-    dressCode: 'Casual',
-    ageLimit: 0,
-    image: '',
+    dressCode: 'dressCode_02',
+    ageLimitId: 'limit_01',
+    imageId: 'imageId_03',
     tickets: [
       { 
         ticketId: 'event_02_ticket_01',
@@ -44,15 +55,15 @@ export const events = [
     ],
   },
   {
-    id: 'event_03',
-    name: 'Dancing Through Night',
-    date: '2026-02-1',
-    location: 'Somwhere in Izmir',
+    eventId: 'event_03',
+    eventName: 'Dancing Through Night',
+    eventDate: '2026-02-1',
+    locationId: 'location_03',
     description: 'Ballroom dance event.',
     alcohol: false,
-    dressCode: 'Formal',
-    ageLimit: 18,
-    image: '',
+    dressCode: 'dressCode_03',
+    ageLimitId: 'limit_03',
+    imageId: 'imageId_02',
     tickets: [
       { 
         ticketId: 'event_03_ticket_01',
@@ -74,15 +85,15 @@ export const events = [
     ],
   },
   {
-    id: 'event_04',
-    name: 'Dreams Land',
-    date: '2026-03-15',
-    location: 'Somwhere in Izmir',
-    description: 'Costume party.',
+    eventId: 'event_04',
+    eventName: 'Dreams Land',
+    eventDate: '2026-03-15',
+    locationId: 'location_03',
+    description: 'dressCode_04.',
     alcohol: false,
     dressCode: 'Costume',
-    ageLimit: 18,
-    image: '',
+    ageLimitId: 'limit_03',
+    imageId: 'imageId_04',
     tickets: [
     { 
         ticketId: 'event_04_ticket_01',
