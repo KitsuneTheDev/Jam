@@ -8,7 +8,9 @@ export default function EventCard({ event }) {
     const theDress = dressCode.find(dress => dress.dressCodeId === event.dressCodeId);
     const theAge = ageLimit.find(age => age.ageLimitId === event.ageLimitId);
     const theLocation = locations.find(location => location.locationId === event.locationId);
-    console.log(theDress);
+    console.log(event);
+
+    const alcoholClass = event.alcohol ? styles.alcohol : styles.noalcohol;
     return(
         <div className={styles.eventCardContainer}>
             <div className={styles.cardHeader}>
@@ -18,7 +20,7 @@ export default function EventCard({ event }) {
                 </div>
                 <div className={styles.headerRight}>
                     <div className={styles.headerAge}>{theAge.ageValue}</div>
-                    <div className={styles.headerAlcohol}>{`${event.alcohol}`}</div>
+                    <div className={`${styles.headerAlcohol} ${alcoholClass}`}>Alcohol</div>
                     <div className={styles.headerDressCode}>{theDress.dressCodeName}</div>
                 </div>
             </div>

@@ -17,9 +17,9 @@
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
-    border: 1px solid black;
+    border-top: 1px solid var(--color-layout-accent-dark);
+    border-bottom: 1px solid var(--color-layout-accent-dark);
     padding: var(--spacing-tiny);
-    background-color: var(--color-surface-main);
 }
 
 .eventsInner::after{
@@ -34,11 +34,18 @@
     z-index: 5;
     padding: var(--spacing-collegue);
     color: var(--color-pink-1);
-    background-color: var(--color-bg-main);
+    background-color: var(--color-layout-main);
     display: flex;
     align-items: center;
     border-radius: 1rem;
     overflow: hidden;
+    text-shadow: 
+        2px 0 black,
+        0px 2px black,
+        -2px 0 black,
+        0px -2px black,
+        0 0 8px var(--color-inner-yellow),
+        4px 4px 4px hsl(from var(--color-inner-yellow) h s l / 0.2);
 }
 
 .eventsHeader{
@@ -49,6 +56,12 @@
     font-family: var(--custom-font-light);
     font-size: var(--custom-font-size-sm);
     padding-top: var(--spacing-collegue);
+    color: var(--color-card-pink);
+    text-shadow: 
+        2px 0 black,
+        0px 2px black,
+        -2px 0 black,
+        0px -2px black;
 }
 
 .headerLeft{
@@ -70,7 +83,14 @@
 .eventName {
     font-family: var(--custom-font-secondary-medium);
     font-size: var(--custom-font-size-md);
-    color: var(--color-violet-1);
+    color: var(--color-card-green);
+    text-shadow: 
+        2px 0 black,
+        0px 2px black,
+        -2px 0 black,
+        0px -2px black,
+        4px 4px 4px hsl(from var(--color-card-green) h s l / 0.5);
+    filter: drop-shadow(0 0 0.55rem var(--color-card-green));
 }
 
 .eventsDetails{
@@ -80,6 +100,12 @@
     font-family: var(--custom-font-light);
     font-size: var(--custom-font-size-sm);
     padding-bottom: var(--spacing-collegue);
+    color: var(--color-card-pink);
+    text-shadow: 
+        2px 0 black,
+        0px 2px black,
+        -2px 0 black,
+        0px -2px black;
 }
 
 .eventsDetail:nth-child(1){

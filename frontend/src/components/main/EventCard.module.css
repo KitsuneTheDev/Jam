@@ -3,9 +3,9 @@
     flex-direction: column;
     gap: var(--spacing-friend);
     padding: var(--spacing-collegue);
-    background-color: var(--color-surface-main);
+    background-color: var(--color-layout-tertiary);
     margin-bottom: var(--spacing-collegue);
-    border: 2px solid var(--color-accent-light);
+    border: 3px solid var(--color-layout-accent-dark);
     border-radius: 1rem;
 }
 
@@ -13,7 +13,43 @@
     display: flex;
     justify-content: space-between;
     font-size: var(--custom-font-size-sm);
-    font-family: Suse-Regular;
+    font-family: var(--custom-font-medium);
+}
+
+.headerLeft{
+    color: white;
+    text-shadow: 
+        2px 0px black, 
+        0px 2px black, 
+        -2px 0px black, 
+        0px -2px black, 
+        4px 4px 0.4em black;
+    filter: drop-shadow(0 0 4px hsl(from white h s l / 0.7))
+}
+
+.headerRight>div:not(.noalcohol){
+    color: white;
+    text-shadow: 
+        2px 0px black, 
+        0px 2px black, 
+        -2px 0px black, 
+        0px -2px black, 
+        4px 4px 0.4em black;
+    filter: drop-shadow(0 0 4px hsl(from white h s l / 0.7))
+}
+
+.headerRight{
+    text-align: end;
+}
+
+.headerAlcohol.noalcohol{
+    color: gray;
+    text-shadow: 
+        2px 0px black, 
+        0px 2px black, 
+        -2px 0px black, 
+        0px -2px black;
+    filter: none;
 }
 
 .cardMain{
@@ -21,10 +57,26 @@
     justify-content: center;
     align-items: center;
     font-size: var(--custom-font-size-lg);
-    font-family: Suse-Bold;
+    font-family: var(--custom-font-bold);
+    color: var(--color-card-pink);
+    text-shadow: 
+        3px 0px var(--color-layout-accent-dark), 
+        0px 3px var(--color-layout-accent-dark), 
+        -3px 0px var(--color-layout-accent-dark), 
+        0px -3px var(--color-layout-accent-dark), 
+        6px 6px 0.2em var(--color-card-pink);
+    filter: drop-shadow(0 0 6px hsl(from var(--color-card-pink) h s l / 0.7))
 }
 
 .cardDetail{
     font-size: var(--custom-font-size-sm);
-    font-family: Suse-Regular;
+    font-family: var(--custom-font-medium);
+    color: white;
+    text-shadow: 
+        2px 0px black, 
+        0px 2px black, 
+        -2px 0px black, 
+        0px -2px black, 
+        4px 4px 0.4em white;
+    filter: drop-shadow(0 0 4px hsl(from white h s l / 0.7))
 }

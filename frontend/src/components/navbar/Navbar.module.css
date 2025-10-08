@@ -16,6 +16,21 @@
     padding-bottom: var(--spacing-boss);
 }
 
+.navbarHeader{
+    width: 100%;
+    font-family: var(--custom-font-sec-regular);
+    font-size: var(--custom-font-size-xxl);
+    color: var(--color-inner-pink);
+    text-shadow: 
+        1px 0px black,
+        0px 1px black,
+        -1px 0px black,
+        0px -1px black,
+        3px 3px 4px hsl(from var(--color-inner-pink) h s l / 0.5);
+    filter: drop-shadow(0 0 0.75rem var(--color-inner-pink));
+    padding-bottom: var(--spacing-boss);
+}
+
 .navbarInner{
     width: 100%;
     height: 100%;
@@ -27,11 +42,27 @@
 .navbarElement{
     font-size: var(--custom-font-size-sm);
     font-weight: 700;
+    text-shadow: 
+        1px 0px black,
+        0px 1px black,
+        -1px 0px black,
+        0px -1px black;
+}
+
+.navbarElement.active{
+    text-shadow: 
+        1px 0px black,
+        0px 1px black,
+        -1px 0px black,
+        0px -1px black,
+        3px 3px 2px hsl(from var(--color-inner-yellow) h s l / 0.5);
+    filter: drop-shadow(0 0 0.4rem var(--color-inner-yellow));
 }
 
 .footerContainer{
     width: 100%;
     font-size: var(--custom-font-size-xs);
+    color: var(--color-layout-accent-light);
 }
 
 @media(min-width: 1025px) {

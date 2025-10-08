@@ -6,8 +6,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--color-bg-main);
-    color: white;
+    background-color: var(--color-layout-main);
+    color: var(--color-inner-yellow);
 }
 
 .layoutGrid{

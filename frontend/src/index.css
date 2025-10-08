@@ -1,18 +1,23 @@
 @import './commoncss/fonts.css';
-
+/* 000831 */
 :root {
-  --color-bg-main: #b5d1cc;
+  --color-layout-main: #000831;
+  --color-layout-secondary: #96bfe6;
+  --color-layout-tertiary: hsl(from #96bfe6 h s l/ 0.1);
+  --color-layout-accent-light: #b85e00;
+  --color-layout-accent-dark: #362304;
 
-  --color-surface-main: #000831;
+  --color-card-pink: #ff4dc9;
+  --color-card-red: #740909;
+  --color-card-green: #b5ffc2;
+  --color-card-blue: #29bdad;
 
-  --color-accent-light: #b85e00;
-  --color-accent-dark: #362304;
-
-  --color-blue-primary: #96bfe6;
-
-  --color-green-primary: #00d973;
-
-  --color-red-primary: #fa2b00;
+  --color-inner-pink: #ff4dc9;
+  --color-inner-yellow: #fff59e;
+  --color-inner-gray: #b5d1cc;
+  
+  --color-inner-green: #76844e;
+  --color-inner-red: #740909;
 
   --custom-font-bold: 'Suse-Bold';
   --custom-font-boldItalic: 'Suse-BoldItalic';
