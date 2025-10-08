@@ -3,7 +3,10 @@
     flex-direction: column;
     gap: var(--spacing-friend);
     padding: var(--spacing-collegue);
-    border-bottom: 1px solid black;
+    background-color: var(--color-surface-main);
+    margin-bottom: var(--spacing-collegue);
+    border: 2px solid var(--color-accent-light);
+    border-radius: 1rem;
 }
 
 .cardHeader{

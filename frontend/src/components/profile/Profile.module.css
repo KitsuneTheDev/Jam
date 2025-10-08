@@ -8,7 +8,7 @@
     box-sizing: border-box;
     display: flex;
     justify-content: center;
-    padding-left: 8px;
+    padding: var(--spacing-tiny)
 }
 
 .profileInner{
@@ -16,9 +16,10 @@
     display: flex;
     align-items: center;
     gap: var(--spacing-boss);
-    border: 1px solid black;
+    border: 2px solid var(--color-accent-light);
     border-radius: 1rem;
-    box-shadow: 2px 2px black;
+    box-shadow: 3px 4px var(--color-accent-light);
+    background-color: var(--color-surface-main);
 }
 
 .profileLeft{
@@ -35,7 +36,8 @@
     text-align: center;
     padding-right: var(--spacing-tiny);
     padding-left: var(--spacing-tiny);
-    border-left: 1px solid black;
+    border-left: 1px solid var(--color-accent-light);
+    color: var(--color-green-primary);
 }
 
 .userNameDesc, .titleDesc{
@@ -44,6 +46,7 @@
     font-size: var(--custom-font-size-xs);
     padding-right: var(--spacing-tiny);
     padding-left: var(--spacing-tiny);
+    color: var(--color-red-primary);
 }
 
 .profileRight{
@@ -77,6 +80,13 @@
     padding-bottom: var(--spacing-social);
 }
 
+.headerLeft{
+    font-family: var(--custom-font-sec-regular);
+    font-size: var(--custom-font-size-xl);
+    line-height: 0.8;
+    color: #ff4dc9;
+}
+
 .headerRight{
     display: flex;
     flex-direction: column;
@@ -104,6 +114,7 @@
 .titleId{
     font-family: var(--custom-font-bold);
     text-align: center;
+    color: var(--color-green-primary);
 }
 
 .infoUp, .infoDown{

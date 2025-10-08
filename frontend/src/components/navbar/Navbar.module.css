@@ -10,18 +10,21 @@
     grid-column-start: 1;
     grid-column-end: 2;
     box-sizing: border-box;
-    border-right: 1px solid black;
+    padding-top: var(--spacing-tiny);
+    padding-left: var(--spacing-social);
+    padding-right: var(--spacing-social);
+    padding-bottom: var(--spacing-boss);
 }
 
 .navbarInner{
     width: 100%;
     height: 100%;
-    padding-top: var(--spacing-social);
-    padding-left: var(--spacing-social);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-collegue);
 }
 
 .navbarElement{
-    padding-bottom: var(--spacing-collegue);
     font-size: var(--custom-font-size-sm);
     font-weight: 700;
 }
@@ -29,9 +32,6 @@
 .footerContainer{
     width: 100%;
     font-size: var(--custom-font-size-xs);
-    padding-left: var(--spacing-social);
-    padding-bottom: var(--spacing-social);
-    padding-right: var(--spacing-social);
 }
 
 @media(min-width: 1025px) {

@@ -9,7 +9,7 @@
     grid-column-start: 1;
     grid-column-end: 5;
     box-sizing: border-box;
-    padding: 8px;
+    padding: var(--spacing-tiny);
 }
 
 .eventsContainer{

@@ -7,8 +7,8 @@ export const profileCardData = {
     retro: {
         userNameDesc: 'NOT VALID UNLESS COUNTERSIGNED',
         rightHeader: 'THE NATIONAL ARCHIVES',
-        headerLeft: 'THE NATIONAL ARCHIVES',
-        titleId: 'IDENTIFICATION CARD',
+        headerLeft: 'JAM CLUB',
+        titleId: 'CLUB MEMBERSHIP CARD',
         titleDesc: 'NOT TRANSFERABLE',
     },
     arcade: {

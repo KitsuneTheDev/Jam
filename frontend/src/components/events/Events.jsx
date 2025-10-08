@@ -25,17 +25,19 @@ export default function Events() {
     
     return(
         <div className={styles.eventsContainer}>
-            <div className={styles.eventsHeader}>
-                <div className={styles.headerLeft}>{demoEvent.eventDate}</div>
-                <div className={styles.headerRight}>{demoLocation.locationName}</div>
-            </div>
-            <div className={styles.eventsBody}>
-                <div className={styles.eventName}>{demoEvent.eventName}</div>
-            </div>
-            <div className={styles.eventsDetails}>
-                <div className={styles.eventsDetail}>{demoAgeLimit.ageValue}</div>
-                <div className={styles.eventsDetail}>{demoEvent.alcohol ? `Alcohol` : `No Alcohol`}</div>
-                <div className={styles.eventsDetail}>{demoDressCode.dressCodeName}</div>
+            <div className={styles.eventsInner}>
+                <div className={styles.eventsHeader}>
+                    <div className={styles.headerLeft}>{demoEvent.eventDate}</div>
+                    <div className={styles.headerRight}>{demoLocation.locationName}</div>
+                </div>
+                <div className={styles.eventsBody}>
+                    <div className={styles.eventName}>{demoEvent.eventName}</div>
+                </div>
+                <div className={styles.eventsDetails}>
+                    <div className={styles.eventsDetail}>{demoAgeLimit.ageValue}</div>
+                    <div className={styles.eventsDetail}>{demoEvent.alcohol ? `Alcohol` : `No Alcohol`}</div>
+                    <div className={styles.eventsDetail}>{demoDressCode.dressCodeName}</div>
+                </div>
             </div>
         </div>
     );

@@ -9,8 +9,9 @@
     grid-column-start: 1;
     grid-column-end: 5;
     box-sizing: border-box;
-    border: 3px solid black;
-    border-radius: 1rem;
+    border: 1px solid black;
+    padding: var(--spacing-tiny);
+    background-color: var(--color-surface-main);
 }
 
 @media(min-width: 1025px) {
