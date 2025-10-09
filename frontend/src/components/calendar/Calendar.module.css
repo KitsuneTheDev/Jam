@@ -2,6 +2,7 @@
     width: 100%;
     height: 100%;
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     grid-row-start: 9;
@@ -13,6 +14,116 @@
     border-bottom: 1px solid var(--color-layout-accent-dark);
     padding: var(--spacing-tiny);
     background-color: var(--color-surface-main);
+}
+
+.calendarContainer::after{
+    content: "CALENDAR";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--custom-font-secondary-medium);
+    padding: var(--spacing-collegue);
+    transform: translateX(-50%) translateY(-50%);
+    background-color: var(--color-layout-main);
+    border-radius: 1rem;
+    text-shadow: 
+        2px 0 black,
+        0px 2px black,
+        -2px 0 black,
+        0px -2px black,
+        0 0 8px var(--color-inner-yellow),
+        0px 6px 4px hsl(from var(--color-inner-yellow) h s l / 0.2);
+    box-shadow: 0px -2px 0 var(--color-layout-accent-dark);
+}
+
+.calendarInner{
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-collegue);
+}
+
+.calendarHeader{
+    padding-top: var(--spacing-collegue);
+}
+
+.headerDetails{
+    font-family: var(--custom-font-bold);
+    font-size: var(--custom-font-size-rg);
+    color: var(--color-card-pink);
+    text-shadow: 
+        1px 0px black,
+        0px 1px black,
+        -1px 0px black,
+        0px -1px black,
+        0px 2px 2px var(--color-card-pink);
+    filter: drop-shadow(0 0 0.25rem var(--color-card-pink));
+}
+
+.calendarHeader{
+    width: inherit;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigationContainer{
+    display: flex;
+    gap: var(--spacing-social);
+}
+
+.navigationContainer>div{
+    font-family: var(--custom-font-bold);
+    font-size: var(--custom-font-size-md);
+    color: var(--color-card-pink);
+    text-shadow: 
+        1px 0px black,
+        0px 1px black,
+        -1px 0px black,
+        0px -1px black,
+        0px 2px 2px var(--color-card-pink);
+    filter: drop-shadow(0 0 0.25rem var(--color-card-pink));
+}
+
+.calendarBody{
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bodyHeader{
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding-top: var(--spacing-collegue);
+}
+
+.headerElement{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-tiny);
+    font-family: var(--custom-font-bold);
+    color: var(--color-layout-accent-light);
+    font-size: var(--custom-font-size-rg);
+    text-shadow: 
+        1px 0px black,
+        0px 1px black,
+        -1px 0px black,
+        0px -1px black,
+        1px 2px 0 silver;
+}
+
+/* INSIDE CALENDAR */
+
+.bodyContent{
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
 }
 
 @media(min-width: 1025px) {
