@@ -1,7 +1,6 @@
 .contentElement{
+    height: 100%;
     position: relative;
-    width: 100%;
-    aspect-ratio: 4/3;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,7 +9,7 @@
 }
 
 .elementOuter{
-    width: 75%;
+    height: 100%;
     aspect-ratio: 1/1;
     background-color: var(--color-layout-secondary);
     border-radius: 25%;
@@ -47,12 +46,12 @@
 
 .contentElement.wild::after{
     content: "WILD";
-    width: 100%;
+    width: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: var(--custom-font-bold);
-    font-size: var(--custom-font-size-rg);
+    font-size: var(--custom-font-size-sm);
     position: absolute;
     color: var(--color-layout-secondary);
     text-shadow: 

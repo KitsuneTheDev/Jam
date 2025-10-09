@@ -1,6 +1,4 @@
 .calendarContainer{
-    width: 100%;
-    height: 100%;
     display: flex;
     position: relative;
     justify-content: center;
@@ -16,7 +14,7 @@
     background-color: var(--color-surface-main);
 }
 
-.calendarContainer::after{
+.calendarInner::after{
     content: "CALENDAR";
     position: absolute;
     left: 50%;
@@ -26,7 +24,7 @@
     align-items: center;
     font-family: var(--custom-font-secondary-medium);
     padding: var(--spacing-collegue);
-    transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-65%);
     background-color: var(--color-layout-main);
     border-radius: 1rem;
     text-shadow: 
@@ -40,7 +38,9 @@
 }
 
 .calendarInner{
-    width: inherit;
+    position: relative;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     gap: var(--spacing-collegue);
@@ -64,7 +64,6 @@
 }
 
 .calendarHeader{
-    width: inherit;
     display: flex;
     justify-content: space-between;
 }
@@ -88,7 +87,8 @@
 }
 
 .calendarBody{
-    width: inherit;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -96,7 +96,7 @@
 }
 
 .bodyHeader{
-    width: 75%;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     padding-top: var(--spacing-collegue);
@@ -121,9 +121,12 @@
 /* INSIDE CALENDAR */
 
 .bodyContent{
-    width: 75%;
+    width: 100%;
+    height: 100%;
     display: grid;
+    padding-bottom: var(--spacing-tiny);
     grid-template-columns: repeat(7, 1fr);
+    gap: var(--spacing-tiny);
 }
 
 @media(min-width: 1025px) {

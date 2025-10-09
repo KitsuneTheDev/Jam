@@ -1,6 +1,4 @@
 .eventsContainer{
-    width: 100%;
-    height: 100%;
     grid-row-start: 8;
     grid-row-end: 9;
     grid-column-start: 1;
