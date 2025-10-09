@@ -20,14 +20,14 @@
     border: 2px solid var(--color-layout-accent-light);
 }
 
-.elementInner.active:nth-child(1){
+.elementInner:nth-child(1){
     width: 100%;
     background-color: var(--color-card-pink);
     filter: drop-shadow(0 3px 0.25rem var(--color-card-pink));
     /* background-color: var(--color-calendar-blend); */
 }
 
-.elementInner.active:nth-child(2){
+.elementInner:nth-child(2){
     width: 100%;
     background-color: var(--color-card-green);
     filter: drop-shadow(
@@ -37,21 +37,21 @@
     /* background-color: var(--color-calendar-blend); */
 }
 
-.elementInner.active:nth-child(3){
+.elementInner:nth-child(3){
     width: 100%;
     background-color: var(--color-inner-yellow);
     filter: drop-shadow(0 -3px 0.25rem var(--color-inner-yellow));
     /* background-color: var(--color-calendar-blend); */
 }
 
-.contentElement.wild::after{
+.contentElement::after{
     content: "WILD";
     width: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: var(--custom-font-bold);
-    font-size: var(--custom-font-size-sm);
+    font-size: var(--custom-font-size-xs);
     position: absolute;
     color: var(--color-layout-secondary);
     text-shadow: 
