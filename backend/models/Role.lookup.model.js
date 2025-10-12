@@ -1,21 +1,18 @@
 import { DataTypes } from "sequelize";
 import sequelize from "../config/db.config";
 
-const User = sequelize.define('User', {
-    userId: {
+const Role = sequelize.define('Role', {
+    roleId: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true,
     },
-    userName: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
-    email: {
+    roleName: {
         type: DataTypes.STRING,
         allowNull: false,
         unique: true,
+        defaultValue: 'user',
     }
-}, {tableName: 'USERS'});
+}, {tableName: 'ROLES'});
 
-export default User;
+export default Role;

@@ -1,21 +1,21 @@
 import { DataTypes } from "sequelize";
 import sequelize from "../config/db.config";
 
-const User = sequelize.define('User', {
-    userId: {
+const Currency = sequelize.define('Currency', {
+    currencyId: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true,
     },
-    userName: {
+    currencyCode: {
         type: DataTypes.STRING,
+        unique: true,
         allowNull: false,
     },
-    email: {
+    currencyNaame: {
         type: DataTypes.STRING,
         allowNull: false,
-        unique: true,
     }
-}, {tableName: 'USERS'});
+}, {tableName: 'CURRENCIES'});
 
-export default User;
+export default Currency;
