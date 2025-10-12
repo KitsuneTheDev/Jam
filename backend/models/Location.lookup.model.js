@@ -1,30 +1,30 @@
 import { DataTypes } from "sequelize";
 import sequelize from "../config/db.config.js";
 
-const Event = sequelize.define('EVENT', {
-    eventId:{
+const Location = sequelize.define('Location', {
+    locationId: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true,
     },
-    eventName: {
+    locationName: {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    description: {
-        type: DataTypes.TEXT,
+    adress: {
+        type: DataTypes.STRING,
         allowNull: false,
     },
-    eventDate: {
-        type: DataTypes.DATE,
+    city: {
+        type: DataTypes.STRING,
         allowNull: false,
     },
-    isAlcohol: {
-        type: DataTypes.BOOLEAN,
-        defaultValue: false
+    country: {
+        type: DataTypes.STRING,
+        allowNull: false
     }
 }, {
-        tableName: 'EVENTS'
+    tableName: 'LOCATIONS'
 });
 
-export default Event;
+export default Location;
