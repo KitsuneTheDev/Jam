@@ -23,8 +23,6 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 
-const server = app.listen(PORT, () => console.log('Server is running.', PORT));
-
 const startServer = async () => {
     let server;
 
