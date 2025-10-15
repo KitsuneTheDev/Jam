@@ -4,7 +4,7 @@ import url from 'url';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import db from './models/index.js';
-import { idSetup } from './setup/dbId.setup.js';
+import { initializeServer } from './setup/server.setup.js';
 
 
 // CREATING HTTP SERVER AND IMPORTING .ENV FILE
@@ -24,43 +24,5 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 
-const startServer = async () => {
-    let server;
+await initializeServer(app, PORT);
 
-    try {
-        await db.sequelize.authenticate();
-        console.log('Database connection is successful');
-
-        await db.sequelize.sync({ alter: true });
-        console.log('Database tables successfully synchronized');
-        await idSetup();
-
-        server = app.listen(PORT, () => console.log(`Server is running on port: ${PORT}`));
-
-        const closeServer = async () => {
-            console.log('HTTP server is closed.');
-
-            server.close(async () => {
-                console.log('HTTP server is closed.');
-
-                try {
-                    await db.sequelize.close();
-                    console.log('DB is disconnected.');
-                } catch(error) {
-                    console.error('DB disconnection error: ', error);
-                }
-
-                process.exit(0);
-            });
-            
-            process.on('SIGINT', closeServer);
-            process.on('SIGTERM', closeServer);
-        }
-    } catch(error) {
-        console.error('DB or Server run error: ', error.message);
-        if(server) server.close(() => process.exit(1));
-        else process.exit(1);
-    }
-};
-
-startServer();
