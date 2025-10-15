@@ -4,6 +4,7 @@ import url from 'url';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import db from './models/index.js';
+import { idSetup } from './setup/dbId.setup.js';
 
 
 // CREATING HTTP SERVER AND IMPORTING .ENV FILE
@@ -32,6 +33,7 @@ const startServer = async () => {
 
         await db.sequelize.sync({ alter: true });
         console.log('Database tables successfully synchronized');
+        await idSetup();
 
         server = app.listen(PORT, () => console.log(`Server is running on port: ${PORT}`));
 
