@@ -14,7 +14,25 @@ import { idSetup } from './dbId.setup.js';
 const initializeServer = async (app, PORT) => {
     let server;
 
+        
+    const closeServer = async () => {
+        console.log('Server is closing...');
+
+        server.close(async () => {
+            console.log('HTTP server is closed');
+
+            try {
+                await db.sequelize.close();
+                process.exit(0);
+            } catch(error) {
+                console.error('DB disconnection error: ', error);
+                process.exit(1);
+            }
+        });
+    };
+
     try {
+        // GOOD MORNING TO DB
         await db.sequelize.authenticate();
         console.log('Database connection is successful');
 
@@ -23,30 +41,16 @@ const initializeServer = async (app, PORT) => {
 
         // await idSetup();
 
+        // ALL EARS
         server = app.listen(PORT, () => console.log(`Server is running on port: ${PORT}`));
-        
-        const closeServer = async () => {
-            console.log('Server is closing...');
 
-            server.close(async () => {
-                console.log('HTTP server is closed');
-
-                try {
-                    await db.sequelize.close();
-                } catch(error) {
-                    console.error('DB disconnection error: ', error);
-                }
-
-                process.exit(0);
-            });
-        }
-
+        // DID YOU JUST...
         process.on('SIGINT', closeServer);
         process.on('SIGTERM', closeServer);
 
     } catch(error) {
         console.error('DB or Server run error: ', error.message);
-
+        // UM OKAY, BYE
         if(server) server.close(() => process.exit(1));
         else process.exit(1);
     }
