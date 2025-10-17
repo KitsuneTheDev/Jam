@@ -28,8 +28,7 @@ const seedLocation = async () => {
                 country: 'USA',
             }
         ], {
-            ignoreDuplicates: true,
-            updateOnDuplicate: ['locationName', 'address', 'city', 'country']
+            ignoreDuplicate: true,
         });
 
         console.log(`LOCATIONS TABLE: Added ${locations.length} record.`);

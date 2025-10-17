@@ -14,6 +14,25 @@ import { idSetup } from './dbId.setup.js';
 const initializeServer = async (app, PORT) => {
     let server;
 
+    const connectDB = async () => {
+        try {
+            await db.sequelize.authenticate();
+            console.log('Connected to Database.');
+        } catch(error) {
+            console.error('Database connection errorS: ', error);
+        }
+    };
+
+    const createTables = async () => {
+        try {
+            await db.sequelize.drop();
+            await db.sequelize.sync();
+            console.log('Tables created successfully.');
+        } catch(error) {
+            console.error('Error while creating tables: ', error);
+        }
+    };
+
         
     const closeServer = async () => {
         console.log('Server is closing...');
@@ -30,17 +49,13 @@ const initializeServer = async (app, PORT) => {
             }
         });
     };
+    // GOOD MORNING TO DB
+    await connectDB();
 
+    await createTables();
+
+    // await idSetup();
     try {
-        // GOOD MORNING TO DB
-        await db.sequelize.authenticate();
-        console.log('Database connection is successful');
-
-        await db.sequelize.sync({ alter:true });
-        console.log('Database tables successfully synchronized');
-
-        // await idSetup();
-
         // ALL EARS
         server = app.listen(PORT, () => console.log(`Server is running on port: ${PORT}`));
 
@@ -49,7 +64,7 @@ const initializeServer = async (app, PORT) => {
         process.on('SIGTERM', closeServer);
 
     } catch(error) {
-        console.error('DB or Server run error: ', error.message);
+        console.error('Server run error: ', error.message);
         // UM OKAY, BYE
         if(server) server.close(() => process.exit(1));
         else process.exit(1);
