@@ -1,5 +1,4 @@
 import db from '../models/index.js';
-import Location from '../models/Location.lookup.model.js';
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -34,8 +33,6 @@ const seedLocation = async () => {
         console.log(`LOCATIONS TABLE: Added ${locations.length} record.`);
     } catch(error) {
         console.error('Error occured on seeding LOCATIONS: ', error);
-    } finally {
-        await db.sequelize.close();
     }
 }
 
