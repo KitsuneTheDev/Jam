@@ -12,7 +12,7 @@ const Currency = sequelize.define('Currency', {
         unique: true,
         allowNull: false,
     },
-    currencyNaame: {
+    currencyName: {
         type: DataTypes.STRING,
         allowNull: false,
     }

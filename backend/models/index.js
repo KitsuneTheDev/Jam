@@ -13,9 +13,6 @@ import UserTicket from './UserTicket.model.js';
 AgeLimit.hasMany(Event, { foreignKey: 'ageLimitId' });
 Event.belongsTo(AgeLimit, { foreignKey: 'ageLimitId' });
 
-Currency.hasMany(Event, { foreignKey: 'currencyId' });
-Event.belongsTo(Currency, { foreignKey: 'currencyId' });
-
 DressCode.hasMany(Event, { foreignKey: 'dressCodeId' });
 Event.belongsTo(DressCode, { foreignKey: 'dressCodeId' });
 
@@ -27,7 +24,18 @@ Role.hasMany(User, { foreignKey: 'roleId' });
 User.belongsTo(Role, { foreignKey: 'roleId' });
 
 // TICKET TABLE ASSOCIATIONS
+Currency.hasMany(Ticket, { foreignKey: 'currencyId' });
+Ticket.belongsTo(Currency, { foreignKey: 'currencyId' });
 
+Event.hasMany(Ticket, { foreignKey: 'eventId' });
+Ticket.belongsTo(Event, { foreignKey: 'eventId' });
+
+// USERTICKET TABLE ASSOCIATIONS
+User.hasMany(UserTicket, { foreignKey: 'userId' });
+UserTicket.belongsTo(User, { foreignKey: 'userId' });
+
+Ticket.hasMany(UserTicket, { foreignKey: 'ticketId' });
+UserTicket.belongsTo(Ticket, { foreignKey: 'ticketId' });
 
 const db = {
     sequelize,

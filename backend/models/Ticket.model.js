@@ -9,7 +9,7 @@ const Ticket = sequelize.define('Ticket', {
     },
     ticketType: {
         type: DataTypes.STRING,
-        allowNull: false,
+        defaultValue: 'Normal',
     },
     ticketPrice: {
         type: DataTypes.FLOAT,

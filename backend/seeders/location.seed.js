@@ -5,7 +5,7 @@ dotenv.config();
 
 const seedLocation = async () => {
     try {
-        console.log('Location seeding is starting... ');
+        console.log('Location seeding is starting...');
 
         const locations = await db.Location.bulkCreate([
             {
@@ -30,10 +30,10 @@ const seedLocation = async () => {
             ignoreDuplicate: true,
         });
 
-        console.log(`LOCATIONS TABLE: Added ${locations.length} record.`);
+        console.log(`LOCATIONS TABLE: Added ${locations.length} record.\n`);
     } catch(error) {
-        console.error('Error occured on seeding LOCATIONS: ', error);
+        console.error('Error occured on seeding LOCATIONS: ', error, '\n');
     }
 }
 
-seedLocation();
+export { seedLocation };

@@ -18,10 +18,10 @@ const seedAgeLimit = async () => {
             ignoreDuplicate: true,
         });
 
-        console.log(`AGELIMIT TABLE: Added ${ageLimits.length} record.`)
+        console.log(`AGELIMIT TABLE: Added ${ageLimits.length} record.\n`)
     } catch(error) {
-        console.error('Error occured on seeding AGELIMIT: ', error);
+        console.error('Error occured on seeding AGELIMIT: ', error, '\n');
     };
 }
 
-seedAgeLimit();
+export { seedAgeLimit };

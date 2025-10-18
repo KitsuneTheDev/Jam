@@ -13,15 +13,14 @@ const UserTicket = sequelize.define('UserTicket', {
     },
     usedAt: {
         type: DataTypes.DATE,
-        allowNull: false,
     },
-    purchasedDate: {
+    purchaseDate: {
         type: DataTypes.DATE,
         allowNull: false,
     },
     qrHash: {
         type: DataTypes.STRING,
-        allowNull: false,
+        // allowNull: false,
         unique: true,
     }
 }, {tableName: 'USERTICKETS'});
