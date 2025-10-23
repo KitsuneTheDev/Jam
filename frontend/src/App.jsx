@@ -7,20 +7,23 @@ import Events from './components/events/Events.jsx';
 import Tickets from './components/tickets/Tickets.jsx';
 import Calendar from './components/calendar/Calendar.jsx';
 import ThemeDataProvider from './contexts/ThemeDataContext.jsx';
+import EventProvider from './contexts/Events.context.jsx';
 
 function App() {
 
   return(
-    <ThemeDataProvider>
-      <Layout>
-        <Navbar />
-        <Profile />
-        <Main />
-        <Events />
-        <Tickets />
-        <Calendar />
-      </Layout>
-    </ThemeDataProvider>
+    <EventProvider>
+      <ThemeDataProvider>
+        <Layout>
+          <Navbar />
+          <Profile />
+          <Main />
+          <Events />
+          <Tickets />
+          <Calendar />
+        </Layout>
+      </ThemeDataProvider>
+    </EventProvider>
   );
 }
 

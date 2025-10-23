@@ -21,7 +21,9 @@ Event.belongsTo(Location, { foreignKey: 'locationId' });
 
 // USER TABLE ASSOCIATIONS
 Role.hasMany(User, { foreignKey: 'roleId' });
+// One role can be assigned to many users
 User.belongsTo(Role, { foreignKey: 'roleId' });
+// Every user can only have one role from the role table
 
 // TICKET TABLE ASSOCIATIONS
 Currency.hasMany(Ticket, { foreignKey: 'currencyId' });

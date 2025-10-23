@@ -1,13 +1,28 @@
 import styles from './Main.module.css';
-import { events } from '../../data/events.js';
+// import { events } from '../../data/events.js';
 import EventCard from './EventCard.jsx';
+import { useEvents } from '../../contexts/Events.context.jsx';
 
 export default function Main() {
+
+    const { events, setEvents, isLoading, error } = useEvents();
+
+    console.log(events);
+
+    if(isLoading) return(
+        <div className={styles.mainConteiner}>
+            <div className={styles.loadingContainer}>
+                <div className={styles.loadingContent}>
+                    Loading...
+                </div>
+            </div>
+        </div>
+    );
 
     return(
         <div className={styles.mainContainer}>
             <div className={styles.eventsContainer}>
-                {events.map((event) => <EventCard key={event.eventId} event={event}/>)}
+                {events.map((event, index) => <EventCard key={index} event={event}/>)}
             </div>
         </div>
     );

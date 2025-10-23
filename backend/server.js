@@ -4,6 +4,7 @@ import url from 'url';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import db from './models/index.js';
+import eventRoutes from './routes/event.route.js';
 import { initializeServer } from './setup/server.setup.js';
 
 
@@ -19,10 +20,12 @@ const PORT = process.env.PORT || 3000;
 
 // CORS SET UP
 const corsOptions = {
-    origin: 'http://localhost:51730',
+    origin: 'http://localhost:5173',
     optionsSuccessStatus: 200
 };
 app.use(cors(corsOptions));
+app.use('/api/events', eventRoutes);
 
 await initializeServer(app, PORT);
+
 

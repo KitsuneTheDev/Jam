@@ -11,9 +11,9 @@ const Location = sequelize.define('Location', {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    adress: {
+    address: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
     },
     city: {
         type: DataTypes.STRING,
