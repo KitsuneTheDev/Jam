@@ -5,6 +5,7 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import db from './models/index.js';
 import eventRoutes from './routes/event.route.js';
+import userRoutes from './routes/user.route.js';
 import { initializeServer } from './setup/server.setup.js';
 
 
@@ -25,6 +26,7 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 app.use('/api/events', eventRoutes);
+app.use('/api/user', userRoutes);
 
 await initializeServer(app, PORT);
 

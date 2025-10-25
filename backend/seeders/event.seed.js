@@ -15,7 +15,7 @@ const seedEvent = async () => {
             }, {
                 eventName: `Let's speak Japanese`,
                 description: 'A speaking event for proactising Japanese for all levels.',
-                eventDate: '2025-11-20',
+                eventDate: '2025-11-01',
                 isAlcohol: false,
                 dressCodeId: 1,
                 locationId: 2,
