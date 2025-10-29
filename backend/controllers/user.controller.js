@@ -21,4 +21,22 @@ const listUserTickets = async(req, res) => {
     }
 }
 
-export { listUserTickets };
+const listUserEvents = async(req, res) => {
+    try {
+        const userEvents = await UserTicketService.getUserEvents(3);
+
+        return res.status(200).json({
+            status: 'success',
+            data: userEvents,
+            count: userEvents.length,
+        });
+    } catch(error) {
+        return res.status(500).json({
+            status: 'error',
+            message: 'An error occured while listing user events',
+            error: error.message,
+        });
+    }
+}
+
+export { listUserTickets, listUserEvents };
