@@ -6,24 +6,12 @@ class UserTicketService {
         @returns {Promise<Array<Events>>}
     */
 
-    static async getUpcomingTicket() {
+    static async getUserTickets(activeUserId) {
         const userTickets = await db.UserTicket.findAll({
             where: {
-                userId: 3,
+                userId: activeUserId,
             },
-            include: [{
-                model: db.Ticket,
-                as: 'Ticket',
-                include: {
-                    model: db.Event,
-                    as: 'Event',
-                }
-            }
-            ]
         });
-
-        console.log(userTickets);
-
         return userTickets;
     }
 }

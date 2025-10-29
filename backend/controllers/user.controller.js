@@ -2,7 +2,7 @@ import UserTicketService from '../services/userTicket.service.js';
 
 const listUserTickets = async(req, res) => {
     try {
-        const userTickets = await UserTicketService.getUpcomingTicket();
+        const userTickets = await UserTicketService.getUserTickets(3);
 
         return res.status(200).json({
             status: 'success',

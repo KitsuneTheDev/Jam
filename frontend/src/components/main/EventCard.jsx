@@ -1,13 +1,15 @@
 import styles from './EventCard.module.css';
+import dayjs from 'dayjs';
 
 export default function EventCard({ event }) {
 
-    const alcoholClass = event.alcohol ? styles.alcohol : styles.noalcohol;
+    const alcoholClass = event.isAlcohol ? styles.alcohol : styles.noalcohol;
+    const eventDateFormatted = dayjs(event.eventDate).format("ddd-MM-YYYY HH:MM"); 
     return(
         <div className={styles.eventCardContainer}>
             <div className={styles.cardHeader}>
                 <div className={styles.headerLeft}>
-                    <div className={styles.headerDate}>{event.eventDate}</div>
+                    <div className={styles.headerDate}>{eventDateFormatted}</div>
                     <div className={styles.headerLocation}>{event.Location.city}</div>
                 </div>
                 <div className={styles.headerRight}>

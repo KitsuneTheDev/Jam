@@ -21,6 +21,13 @@ const Ticket = sequelize.define('Ticket', {
     ticketSold: {
         type: DataTypes.INTEGER, // REDUNDANT! REQUIRES FURTHER MEASURES
     }
-}, {tableName:'TICKETS'});
+}, {tableName:'TICKETS'}, {
+    indexes: [
+        {
+            name: 'ticket_event_fk_idx',
+            fields: ['eventId'],
+        }
+    ]
+});
 
 export default Ticket;

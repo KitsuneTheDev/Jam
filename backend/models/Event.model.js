@@ -25,6 +25,13 @@ const Event = sequelize.define('Event', {
     }
 }, {
         tableName: 'EVENTS'
+}, {
+    indexes: [
+        {
+            name: 'event_location_fk_idx',
+            fields: ['locationId'],
+        }
+    ]
 });
 
 export default Event;
