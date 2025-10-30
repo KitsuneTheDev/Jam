@@ -8,21 +8,24 @@ import Tickets from './components/tickets/Tickets.jsx';
 import Calendar from './components/calendar/Calendar.jsx';
 import ThemeDataProvider from './contexts/ThemeDataContext.jsx';
 import EventProvider from './contexts/Events.context.jsx';
+import UserTicketProvider from './contexts/UserTickets.context.jsx';
 
 function App() {
 
   return(
     <EventProvider>
-      <ThemeDataProvider>
-        <Layout>
-          <Navbar />
-          <Profile />
-          <Main />
-          <Events />
-          <Tickets />
-          <Calendar />
-        </Layout>
-      </ThemeDataProvider>
+      <UserTicketProvider>
+        <ThemeDataProvider>
+          <Layout>
+            <Navbar />
+            <Profile />
+            <Main />
+            <Events />
+            <Tickets />
+            <Calendar />
+          </Layout>
+        </ThemeDataProvider>
+      </UserTicketProvider>
     </EventProvider>
   );
 }

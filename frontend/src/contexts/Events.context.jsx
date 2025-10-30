@@ -5,12 +5,12 @@ const EventContext = createContext();
 
 export default function EventProvider({ children }) {
 
-    const { events, isLoading, error, setEvents } = useEventsData();
+    const { events, isEventsLoading, eventsError, setEvents } = useEventsData();
 
     const values ={
         events,
-        isLoading,
-        error,
+        isEventsLoading,
+        eventsError,
         setEvents,
     }
 

@@ -1,15 +1,14 @@
-import styles from './Main.module.css';
-// import { events } from '../../data/events.js';
+import styles from './Main.module.css'; 
 import EventCard from './EventCard.jsx';
 import { useEvents } from '../../contexts/Events.context.jsx';
 
 export default function Main() {
 
-    const { events, setEvents, isLoading, error } = useEvents();
+    const { events, setEvents, isEventsLoading, eventsError } = useEvents();
 
     console.log(events);
 
-    if(isLoading) return(
+    if(isEventsLoading) return(
         <div className={styles.mainConteiner}>
             <div className={styles.loadingContainer}>
                 <div className={styles.loadingContent}>

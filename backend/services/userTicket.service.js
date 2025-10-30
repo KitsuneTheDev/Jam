@@ -11,35 +11,29 @@ class UserTicketService {
             where: {
                 userId: activeUserId,
             },
-        });
-        return userTickets;
-    }
-
-    static async getUserEvents(activeUserId) {
-        const userEvents = await db.Event.findAll({
-            include: [{
-                model: db.UserTicket,
-                as: 'UserTicket',
-                required: true,
-
-                where: {
-                    userId: activeUserId,
-                    isUsed: {
-                        [Op.is]: false,
+            include: [
+                {
+                    model: db.Ticket,
+                    as: 'Ticket',
+                    include: {
+                        model: db.Event,
+                        as: 'Event',
+                        include: [{
+                            model: db.Location,
+                            as: 'Location'
+                        }, {
+                            model: db.AgeLimit,
+                            as: 'AgeLimit',
+                        }, {
+                            model: db.DressCode,
+                            as: 'DressCode'
+                        }]
                     }
                 }
-            }],
-            where: {
-                eventDate: {
-                    [Op.gt]: new Date(),
-                }
-            },
-
-            oreder: [['eventDate', 'ASC']],
-            distinct: true,
+            ],
+            order: [[{model: db.Ticket, as:'ticket'}, {model: db.Event, as: 'Event'}, 'eventDate', 'ASC']],
         });
-
-        return userEvents;
+        return userTickets;
     }
 }
 
