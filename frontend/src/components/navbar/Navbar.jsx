@@ -1,8 +1,11 @@
 import styles from './Navbar.module.css';
+import { Link } from 'react-router';
 
 export default function Navbar() {
 
-    const activeClass = styles.active;
+    const showMe = (event) => {
+        console.log(event.target.classList);
+    }
 
     return(
         <div className={styles.navbarContainer}>
@@ -10,11 +13,11 @@ export default function Navbar() {
                 JAM
             </div>
             <nav className={styles.navbarInner}>
-                <div className={`${styles.navbarElement} ${activeClass}`}>HOME</div>
-                <div className={styles.navbarElement}>PROFILE</div>
-                <div className={styles.navbarElement}>MY-EVENTS</div>
-                <div className={styles.navbarElement}>MY-TICKETS</div>
-                <div className={styles.navbarElement}>CALENDAR</div>
+                <Link className={`${styles.navbarElement} ${styles.active} ${styles.flick}`} onClick={showMe}>HOME</Link>
+                <Link className={styles.navbarElement}>PROFILE</Link>
+                <Link className={styles.navbarElement}>MY-EVENTS</Link>
+                <Link className={styles.navbarElement}>MY-TICKETS</Link>
+                <Link className={styles.navbarElement}>CALENDAR</Link>
             </nav>
             <footer className={styles.footerContainer}>
                 <div>Copyright ©2025 Ozan Celikkol.</div>

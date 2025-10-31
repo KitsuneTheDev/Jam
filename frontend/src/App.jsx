@@ -1,4 +1,5 @@
-import './App.css'
+import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router';
 import Layout from './components/layout/Layout.jsx';
 import Navbar from './components/navbar/Navbar.jsx';
 import Profile from './components/profile/Profile.jsx';
@@ -16,14 +17,20 @@ function App() {
     <EventProvider>
       <UserTicketProvider>
         <ThemeDataProvider>
-          <Layout>
-            <Navbar />
-            <Profile />
-            <Main />
-            <Events />
-            <Tickets />
-            <Calendar />
-          </Layout>
+          <BrowserRouter>
+              <Layout>
+                <Navbar />
+                <Profile />
+                <Routes>
+                  <Route path='/' element={ <Main /> }>
+                    <Route index element={ <Main />} />
+                  </ Route>
+                </Routes>
+                <Events />
+                <Tickets />
+                <Calendar />
+              </Layout>
+          </BrowserRouter>
         </ThemeDataProvider>
       </UserTicketProvider>
     </EventProvider>
