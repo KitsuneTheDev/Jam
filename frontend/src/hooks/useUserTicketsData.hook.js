@@ -14,7 +14,7 @@ export function useUserTicketsData() {
                 setUserTickets(() => userTickets);
                 setUserTicketsError(null);
             } catch(error) {
-                consoler.error(error);
+                console.error(error);
                 setUserTicketsError('An error occured while loading user tickets.');
             } finally {
                 setIsUserTicketsLoading(false);
