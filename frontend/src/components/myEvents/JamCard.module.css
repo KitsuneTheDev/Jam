@@ -1,0 +1,22 @@
+.jamCardOuter{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid var(--color-layout-accent-dark);
+    color: var(--color-inner-pink);
+    padding-bottom: var(--spacing-collegue);
+}
+
+.jamCardHeader{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-shadow: 2px 0px black, 0px 2px black, -2px 0px black, 0px -2px black, 3px 3px 2px hsl(from var(--color-inner-pink) h s l / 0.5);
+    filter: drop-shadow(0 0 0.4rem var(--color-inner-pink));
+}
+
+.jamCardHeader>div{
+    width: 30%;
+    padding-top: var(--spacing-collegue);
+}

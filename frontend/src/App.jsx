@@ -6,6 +6,7 @@ import Profile from './components/profile/Profile.jsx';
 import Main from './components/main/Main.jsx';
 import Events from './components/events/Events.jsx';
 import MyEvents from './components/myEvents/MyEvents.jsx';
+import AddEvent from './components/addevent/AddEvent.jsx';
 import Tickets from './components/tickets/Tickets.jsx';
 import Calendar from './components/calendar/Calendar.jsx';
 import ThemeDataProvider from './contexts/ThemeDataContext.jsx';
@@ -25,7 +26,8 @@ function App() {
                 <Profile />
                 <Routes>
                   <Route index element={ <Main />} />
-                  <Route path='/myevents' element={ <MyEvents /> } />
+                  <Route path='/myjams' element={ <MyEvents /> } />
+                  <Route path='/addevent' element={ <AddEvent /> } />
                 </Routes>
                 <Events />
                 <Tickets />

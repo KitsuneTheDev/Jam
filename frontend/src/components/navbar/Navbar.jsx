@@ -14,9 +14,8 @@ export default function Navbar() {
             </div>
             <nav className={styles.navbarInner}>
                 <NavLink to='/' className={({ isActive }) => `${styles.navbarElement} ${isActive && styles.active} ${isActive && styles.flick}`} onClick={showMe}>HOME</NavLink>
-                <NavLink to='/myevents' className={({ isActive }) => `${styles.navbarElement} ${isActive && styles.active} ${isActive && styles.flick}`}>MY-EVENTS</NavLink>
-                <NavLink to='/mytickets' className={({ isActive }) => `${styles.navbarElement} ${isActive && styles.active} ${isActive && styles.flick}`}>MY-TICKETS</NavLink>
-                <NavLink to='/calendar' className={({ isActive }) => `${styles.navbarElement} ${isActive && styles.active} ${isActive && styles.flick}`}>CALENDAR</NavLink>
+                <NavLink to='/myjams' className={({ isActive }) => `${styles.navbarElement} ${isActive && styles.active} ${isActive && styles.flick}`}>MY-JAMS</NavLink>
+                <NavLink to='/addevent' className={({ isActive }) => `${styles.navbarElement} ${isActive && styles.active} ${isActive && styles.flick}`}>ADD-EVENT</NavLink>
             </nav>
             <footer className={styles.footerContainer}>
                 <div>Copyright ©2025 Ozan Celikkol.</div>

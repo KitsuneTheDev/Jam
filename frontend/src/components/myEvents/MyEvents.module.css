@@ -1,12 +1,28 @@
 .myEventsContainer{
     width: 100%;
     height: 100%;
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    align-items: start;
     grid-row-start: 4;
     grid-row-end: 8;
     grid-column-start: 1;
     grid-column-end: 5;
+    box-sizing: border-box;
     padding: var(--spacing-tiny);
+}
+
+.myEventBody{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+@media(min-width: 1025px) {
+    .myEventsContainer{
+        grid-column-start: 2;
+        grid-column-end: 6;
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
 }
