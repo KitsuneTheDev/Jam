@@ -12,6 +12,17 @@
     padding: var(--spacing-tiny);
 }
 
+.myEventHeader{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-shadow: 2px 0px black, 0px 2px black, -2px 0px black, 0px -2px black, 3px 3px 2px hsl(from var(--color-inner-yellow) h s l / 0.5);
+    filter: drop-shadow(0 0 0.4rem var(--color-inner-yellow));
+    font-family: var(--custom-font-sec-regular);
+    font-size: var(--custom-font-sizexl);
+}
+
 .myEventBody{
     width: 100%;
     display: flex;
