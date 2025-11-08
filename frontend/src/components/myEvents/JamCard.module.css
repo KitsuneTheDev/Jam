@@ -2,7 +2,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    border-bottom: 2px solid var(--color-layout-accent-dark);
+    border-bottom: 2px solid var(--color-layout-accent-light);
     color: var(--color-inner-pink);
     padding-bottom: var(--spacing-collegue);
 }
@@ -19,4 +19,34 @@
 .jamCardHeader>div{
     width: 30%;
     padding-top: var(--spacing-collegue);
+}
+
+.jamCardBody{
+    padding-left: var(--spacing-boss);
+    padding-right: var(--spacing-boss);
+    padding-top: var(--spacing-friend);
+    display: flex;
+    justify-content: space-between;
+}
+
+.gotToTicket{
+    color: var(--color-inner-yellow);
+    text-shadow: 2px 0px black, 2px 0px black, -2px 0px black, 0px -2px black, 4px 4px 0.4rem var(--color-inner-yellow);
+    filter: drop-shadow(0 0 4px hsl(from var(--color-inner-yellow) h s l / 0.7));
+}
+
+.gotToTicket:hover{
+    cursor: pointer;
+}
+
+.isTicketActive{
+    color: gray;
+    text-shadow: 2px 0px black, 0px 2px black, -2px 0px black, 0px -2px black;
+    filter: none;
+}
+
+.isTicketActive.active{
+    color: white;
+    text-shadow: 2px 0px black, 0px 2px black, -2px 0px black, 0px -2px black, 4px 4px 0.4em black;
+    filter: drop-shadow(0 0 4px hsl(from white h s l / 0.7));
 }

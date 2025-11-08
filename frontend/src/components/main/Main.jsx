@@ -9,7 +9,7 @@ export default function Main() {
     console.log(events);
 
     if(isEventsLoading) return(
-        <div className={styles.mainConteiner}>
+        <div className={`${styles.mainContainer}`}>
             <div className={styles.loadingContainer}>
                 <div className={styles.loadingContent}>
                     Loading...
@@ -19,7 +19,7 @@ export default function Main() {
     );
 
     return(
-        <div className={styles.mainContainer}>
+        <div className={`${styles.mainContainer} ${styles.slideIn}`}>
             <div className={styles.eventsContainer}>
                 {events.map((event, index) => <EventCard key={index} event={event}/>)}
             </div>

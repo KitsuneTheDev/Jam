@@ -1,3 +1,5 @@
+@import '../../commoncss/animations.css';
+
 .navbarContainer{
     width: 100%;
     height: 100%;
@@ -83,53 +85,11 @@
     color: var(--color-layout-accent-light);
 }
 
-/* ANIMATION CLASSES */
-.flick{
-    animation: flicker-initial 2s linear;
-}
-
 @media(min-width: 1025px) {
     .navbarContainer{
         grid-row-start: 1;
         grid-row-end: 4;
         grid-column-start: 1;
         grid-column-end: 2;
-    }
-}
-
-/* KEYFRAMES */
-@keyframes flicker-initial{
-    0%{
-        filter: none;
-        color: gray;
-    }
-    10%{
-        color: hsl(from var(--color-inner-yellow) h s l / 0.7);
-        filter: drop-shadow(0 0 0.2rem var(--color-inner-yellow));
-    }
-    11%{
-        filter: none;
-        color: gray;
-    }
-    25%{
-        color: hsl(from var(--color-inner-yellow) h s l / 0.7);
-        filter: drop-shadow(0 0 0.2rem var(--color-inner-yellow));
-    }
-
-    27%{
-        color: var(--color-inner-yellow);
-        filter: drop-shadow(0 0 0.4rem var(--color-inner-yellow));        
-    }
-    30%{
-        filter: none;
-        color: gray;
-    }
-    35%{
-        color: var(--color-inner-yellow);
-        filter: drop-shadow(0 0 0.4rem var(--color-inner-yellow));      
-    }
-    100%{
-        color: var(--color-inner-yellow);
-        filter: drop-shadow(0 0 0.4rem var(--color-inner-yellow));
     }
 }
