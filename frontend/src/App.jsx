@@ -9,9 +9,11 @@ import MyEvents from './components/myEvents/MyEvents.jsx';
 import AddEvent from './components/addevent/AddEvent.jsx';
 import Tickets from './components/tickets/Tickets.jsx';
 import Calendar from './components/calendar/Calendar.jsx';
+import TicketDisplayModal from './components/modals/ticketDisplayModal.jsx';
 import ThemeDataProvider from './contexts/ThemeDataContext.jsx';
 import EventProvider from './contexts/Events.context.jsx';
 import UserTicketProvider from './contexts/UserTickets.context.jsx';
+import TicketDisplayModalProvider from './contexts/TicketDisplayModalContext.jsx';
 
 
 function App() {
@@ -20,20 +22,23 @@ function App() {
     <EventProvider>
       <UserTicketProvider>
         <ThemeDataProvider>
-          <BrowserRouter>
-              <Layout>
-                <Navbar />
-                <Profile />
-                <Routes>
-                  <Route index element={ <Main />} />
-                  <Route path='/myjams' element={ <MyEvents /> } />
-                  <Route path='/addevent' element={ <AddEvent /> } />
-                </Routes>
-                <Events />
-                <Tickets />
-                <Calendar />
-              </Layout>
-          </BrowserRouter>
+          <TicketDisplayModalProvider>
+            <BrowserRouter>
+                <Layout>
+                  <TicketDisplayModal />
+                  <Navbar />
+                  <Profile />
+                  <Routes>
+                    <Route index element={ <Main />} />
+                    <Route path='/myjams' element={ <MyEvents /> } />
+                    <Route path='/addevent' element={ <AddEvent /> } />
+                  </Routes>
+                  <Events />
+                  <Tickets />
+                  <Calendar />
+                </Layout>
+            </BrowserRouter>
+          </TicketDisplayModalProvider>
         </ThemeDataProvider>
       </UserTicketProvider>
     </EventProvider>
