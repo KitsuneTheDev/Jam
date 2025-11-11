@@ -4,7 +4,7 @@
 }
 
 .slideIn{
-    animation: slide-in 0.3s linear;
+    animation: slide-in 0.3s ease-out;
 }
 
 /* KEYFRAMES */
@@ -46,11 +46,11 @@
 
 @keyframes slide-in {
     0%{
-        padding-top: 100%;
+        transform: translateX(100%);
         overflow: hidden;
     }
 
     100%{
-        margin-top: 0;
+        transform: translateX(0%);
     }
 }

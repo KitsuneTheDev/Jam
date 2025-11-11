@@ -6,7 +6,7 @@ export default function EventCard({ event }) {
     const alcoholClass = event.isAlcohol ? styles.alcohol : styles.noalcohol;
     const eventDateFormatted = dayjs(event.eventDate).format("ddd-MM-YYYY HH:MM"); 
     return(
-        <div className={styles.eventCardContainer}>
+        <div className={`${styles.eventCardContainer}`}>
             <div className={styles.cardHeader}>
                 <div className={styles.headerLeft}>
                     <div className={styles.headerDate}>{eventDateFormatted}</div>

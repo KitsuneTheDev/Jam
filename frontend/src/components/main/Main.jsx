@@ -19,7 +19,7 @@ export default function Main() {
     );
 
     return(
-        <div className={`${styles.mainContainer} ${styles.slideIn}`}>
+        <div className={`${styles.mainContainer}  ${styles.slideIn}`}>
             <div className={styles.eventsContainer}>
                 {events.map((event, index) => <EventCard key={index} event={event}/>)}
             </div>
